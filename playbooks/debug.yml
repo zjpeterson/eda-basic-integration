@@ -1,0 +1,10 @@
+---
+- name: Show variable as message
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Debug task
+      ansible.builtin.debug:
+        msg: "Your message: {{ event.payload.message }}"
