@@ -8,11 +8,11 @@
         port: 5000
 
   rules:
-    - name: Say Hello
+    - name: Display message
       condition: event.payload.message is defined
       action:
-        # run_job_template:
-        #   name: Debug test
-        #   organization: Default
-        run_playbook:
-          name: playbooks/debug.yml
+        run_job_template:
+          name: Debug test
+          organization: Default
+        # run_playbook:
+        #   name: playbooks/debug.yml
