@@ -7,4 +7,4 @@
   tasks:
     - name: Debug task
       ansible.builtin.debug:
-        msg: "Your message: {{ event.payload.message }}"
+        msg: "Your message: {{ ansible_eda.event.payload.message }}"
